@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------------ Font Awesome ----------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!------------------ Animate.css ----------------->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!------------------ Hover.css ----------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"/>
+    <!------------------ Favicon ----------------->
+    <link rel="shortcut icon" href="../images/astronaut.ico" type="image/x-icon">
+    <!------------------ External css (sass) ----------------->
+    <link rel="stylesheet" href="../css/contact.min.css">
+    <!------------------ Title ----------------->
+    <title>Thauã Engelmann | Front-End Developer</title>
+</head>
+<body>
+
+    <!------------------ Contact ----------------->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-content-title title animate__animated animate__bounceInRight my-2">
+                    <span class="single-letter custom-tag">&lt;</span>
+                    <span class="single-letter">L</span>
+                    <span class="single-letter">e</span>
+                    <span class="single-letter">t</span>
+                    <span class="single-letter">'</span>
+                    <span class="single-letter">s</span>
+                    <span class="space"></span>
+                    <span class="single-letter">t</span>
+                    <span class="single-letter">a</span>
+                    <span class="single-letter">l</span>
+                    <span class="single-letter">k</span>
+                    <span class="single-letter custom-tag">/</span>
+                    <span class="single-letter custom-tag">&gt;</span>
+                </div>
+                <p class="animate__animated animate__bounceInLeft">If you wanna get in touch, talk to me about a project or even just to say a hi, don't hesitate to fill up the form below or send an e-mail to <strong><a href="mailto:@engelmann.webdev@gmail.com">engelmann.webdev@gmail.com</a></strong> and let's talk.</p>
+                <div class="form animate__animated animate__bounceInRight">
+                    <form class="my-4" action="#">
+                        <div class="input-group">
+                            <label for="nameInput" class="sr-only">Name</label>
+                            <i class="fa fa-user"></i>
+                            <input id="nameInput" type="text" placeholder="Your name">
+                            <div class="underline"></div>
+                        </div>
+                        <div class="input-group">
+                            <label for="emailInput" class="sr-only">Email</label>
+                            <i class="fas fa-envelope"></i>
+                            <input id="emailInput" type="text" placeholder="Your email">
+                            <div class="underline"></div>
+                        </div>
+                        <div class="input-group">
+                            <label for="messageInput" class="sr-only">Message</label>
+                            <i class="fas fa-edit"></i>
+                            <textarea name="" id="messageInput" placeholder="Now your message..."></textarea>
+                            <div class="underline"></div>
+                        </div>
+                        <div class="submit-group my-3">
+                            <button id="submitBtn" class="pushable" type="submit">
+                                <span class="front">
+                                    Submit
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="get-social animate__animated animate__bounceInLeft">
+                    <h2>Let's get social</h2>
+                    <p class="my-1">Follow me on my social medias or take a look at my resume!</p>
+                    <div class="get-social-links my-2">
+                        <ul class="flex-wrap">
+                            <li class="pushable">
+                                <a class="front linkedin" href="https://www.linkedin.com/in/thau%C3%A3-engelmann-6aaa04219/" target="_blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    Linkedin
+                                </a>
+                            </li>
+                            <li class="pushable">
+                                <a class="front github" href="https://github.com/thaua-engelmann" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    Github
+                                </a>
+                            </li>
+                            <li class="pushable">
+                                <a class="front email" href="mailto:engelmann.webdev@gmail.com">
+                                    <i class="fas fa-envelope"></i>
+                                    Email
+                                </a>
+                            </li>
+                            <li class="pushable">
+                                <a class="front resume" href="/resume/Thauã_Engelmann_-_english.pdf" download="resume-ThauãEngelmann">
+                                    <i class="fas fa-id-badge"></i>
+                                    Resume
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------------ Navigation ----------------->
+    <section class="navegation">
+        <nav class="nav flex-center">
+            <ul class="nav-menu flex-column">
+                <li class="nav-item hvr-shutter-out-horizontal">
+                    <a href="index.html">home</a>
+                </li>
+                <li class="nav-item hvr-shutter-out-horizontal">
+                    <a href="about.html">about</a>
+                </li>
+                <li class="nav-item hvr-shutter-out-horizontal">
+                    <a href="projects.html">projects</a>
+                </li>
+                <li class="nav-item hvr-shutter-out-horizontal">
+                    <a href="contact.html">contact</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!------------------ Success message contact form ----------------->
+    <div class="success flex-between">
+        <span class="msg">Thanks for getting in touch!</span>
+        <span class="check flex-center"><i class="fas fa-check"></i></span>
+    </div>
+    
+    <!------------------ Turn off / on music ----------------->
+    <div class="music-toggle animate__animated animate__bounceInLeft">
+        <p>Sound</p>
+        <label for="music">
+            <input type="checkbox" name="music" id="music">
+            <span class="handle"></span>
+            <span class="led"></span>
+        </label>
+    </div>
+
+    <!------------------ Button navbar ----------------->
+    <ul class="menu-btn animate__animated animate__bounceInRight">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <!------------------ Page control ----------------->
+    <div class="page-control">
+        <a href="projects.html" class="previous animate__animated">
+            <span><i class="fas fa-chevron-left"></i></span>
+            <span><i class="fas fa-chevron-left"></i></span>
+        </a>
+    </div>
+
+    <!------------------ Canvas ----------------->
+    <canvas id="canvas"></canvas>
+
+    <!------------------ Scripts ----------------->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../javascript/jquery/jquery.js"></script>
+    <script src="../javascript/cursor/cursor.js"></script>
+    <script src="../javascript/form/form.js"></script>
+    <script src="../javascript/main.js"></script> 
+    
+</body>
+</html>

@@ -1,0 +1,131 @@
+@media (max-width: 1200px) {
+    html {
+        font-size: 15px;
+
+        .container {
+            max-width: 95%;
+        }
+
+        #showcase .showcase-content-title {
+            font-size: 2.7rem;
+            letter-spacing: -0.60rem;
+
+            .custom-letter {
+                font-size: 6rem;
+            }
+        }
+
+        .page-control {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 790px) {
+    html {
+        font-size: 14px;
+
+        #projects .projects-content .project-item {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 25rem;
+                height: auto;
+                padding: 2rem;
+            }
+        }
+
+        .modal-project .modal-project-box {
+            display: grid;
+            grid-template-columns: none;
+            
+        }
+    }
+}
+
+
+@media (max-width: 550px) {
+    html {
+        font-size: 13px;
+
+        #showcase {
+            .showcase-content {
+                &-title {
+                    font-size: 2.30rem;
+                    letter-spacing: -0.40rem;
+                    line-height: 1.3;
+    
+                    .custom-letter {
+                        font-size: 4.4rem;
+                    }
+                }
+
+                &-text {
+                    p {
+                        font-size: .98rem;
+                    }
+
+                    a button {
+                        padding: .6rem 1.4rem;
+                    }
+                }
+            }
+        }
+
+        .music-toggle {
+            top: 4.5rem;
+        }
+
+        .menu-btn {
+            top: unset;
+            bottom: 4.5rem;
+            border-radius: 50%;
+            width: 3.7rem;
+            height: 3.7rem;
+        }
+
+        #about, #projects, #contact {
+            text-align: left;
+
+            .about-content, .projects-content, .contact-content {
+
+                &-title {
+                    text-align: left;
+                    font-size: 2.1rem;
+                }
+    
+                .bg-text {
+                    font-size: 3.7rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    html {
+        font-size: 12px;
+
+        #showcase {
+            .showcase-content-title {
+                font-size: 1.8rem;
+                letter-spacing: -0.35rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 10px;
+
+        #showcase {
+            .showcase-content-title {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}

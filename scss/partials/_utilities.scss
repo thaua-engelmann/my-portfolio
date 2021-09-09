@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+@import 'animations';
+
+body {
+    background-color: $bg-color;
+    color: $white-color;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 70%;
+    width: 100%;
+    min-height: 100%;
+    padding: 0 1.5rem;
+    margin: auto;
+}
+
+// **************** Flex classes **************** //
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+// **************** Custom Spans **************** //
+.custom-tag, .custom-letter {
+    color: $primary-color;
+    text-shadow: -0.3rem 0 1px $secondary-color;
+}
+
+.custom-letter {
+    font-size: 8.2rem;
+    transform: rotate(-5deg);
+    pointer-events: none;
+    line-height: 1;
+}
+
+.space {
+    padding: 0 7px;
+}
+
+// **************** Buttons **************** //
+.parallelogram {
+    transform: skew(-19deg);
+}
+
+.pushable {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+
+    &:hover {
+        .front {transform: translateY(-2px);}
+    }
+}
+
+.front {
+    color: white;
+    transform: translateY(-6px);
+}
+
+// **************** Sections Title **************** //
+.title {
+    font-weight: bold;
+    font-family: 'Merienda', cursive;
+    color: $white-color;
+
+    span {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-iteration-count: 1;
+
+        &.animated {
+            -webkit-animation-name: rubberBand;
+            animation-name: rubberBand;
+        }
+    }
+}
+
+// **************** Hover.css **************** //
+.hvr-shutter-out-horizontal::before {
+    background-color: $dark-light;
+}
+
+// **************** Screen Only **************** //
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important; 
+}

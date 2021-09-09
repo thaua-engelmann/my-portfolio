@@ -1,0 +1,43 @@
+// $VARIABLES;
+$bg-color: #212121;
+$white-color: #fff;
+$primary-color: #45f1f7;
+$secondary-color: #ff2962;
+$dark-color: #333;
+$dark-light: #777;
+$text-color: #d4d4d4;
+$error-color: #985c5c;
+
+//PADDINGS & MARGINS;
+$spaceAmounts: (1, 2, 3, 4, 5);
+@each $space in $spaceAmounts{
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+
+    .py-#{$space}{
+        padding: #{$space}rem 0;
+    }
+};
+
+// Transitions
+@mixin transition($property, $duration, $easing: linear) {
+    transition: $property $duration $easing;
+    -webkit-transition: $property $duration $easing;
+    -moz-transition: $property $duration $easing;
+}
+
+// Gradient
+@mixin linear-gradient($direction, $color-stops...) {
+    background: nth(nth($color-stops, 1), 1);
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background: linear-gradient($direction, $color-stops);
+}

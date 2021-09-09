@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+                
+@import './partials/config';
+@import './partials/reset';
+@import './partials/features';
+@import './partials/animations';
+@import './partials/utilities';
+@import './partials/desktop';
+@import './partials/mobile';
+
+// ------------------ SHOWCASE ----------------- //
+#showcase {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    right: 3.5rem;
+    overflow-x: hidden;
+    touch-action: none;
+
+    .showcase-content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &-title {
+            font-size: 3.2rem;
+            line-height: 1.2;
+            letter-spacing: -0.70rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        &-text {
+            position: relative;
+
+            p {
+                font-size: 1.2rem;
+                color: $dark-light;
+
+                span {
+                    color: $secondary-color;
+                    font-weight: bold;
+                }
+            }
+
+            a button {
+                border: 2px solid $primary-color;
+                color: $primary-color;
+                padding: .9rem 2.3rem;
+                font-size: 1rem;
+                text-transform: uppercase;
+                transition: .5s;
+
+                &:hover {
+                    transform: scale(.95);
+                    color: $dark-color;
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+}

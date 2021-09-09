@@ -1,0 +1,244 @@
+@import './partials/config';
+@import './partials/reset';
+@import './partials/features';
+@import './partials/animations';
+@import './partials/utilities';
+@import './partials/desktop';
+@import './partials/mobile';
+
+//Projects section
+#projects {
+    padding: 4rem 0;
+    width: 100%;
+    position: relative;
+    color: $text-color;
+
+    .projects-content {
+        position: relative;
+        overflow-x: hidden;
+
+        &-title {
+            font-size: 2.9rem;
+        }
+
+        &-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            z-index: 100;
+
+            .project-item {
+                width: 47%;
+                height: 18rem;
+                position: relative;
+                padding: 1rem;
+                text-align: center;
+                transition: .4s ease-in-out;
+                background: #313236;
+                padding: 3rem;
+                display: flex;
+                align-items: center;
+
+                &:hover {
+                    box-shadow: inset 0 0 20px $dark-light;
+
+                    .view-project {
+                        opacity: 1;
+                        animation: fadeRight .8s forwards;
+                    }
+                }
+
+                .browser-window {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    background-color: $dark-light;
+                    padding: .3rem 0;
+
+                    .row {
+                        display: flex;
+                        justify-content: space-between;
+                        
+                        &-left, &-right {
+                            margin: 0 10px;
+
+                            .dot {
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 50%;
+
+                                &:nth-child(1) {
+                                    background-color: #ed594a;
+                                }
+
+                                &:nth-child(2) {
+                                    background-color: #fdd800;
+                                }
+
+                                &:nth-child(3) {
+                                    background-color: #5ac05a;
+                                }
+                            }
+                        }
+
+                        &-right {
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                .view-project {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 2rem;
+                    opacity: 0;
+                    transition: .4s;
+                    cursor: pointer;
+
+                    .pushable {
+                        background-color: $dark-light;
+                        gap: .5rem;
+
+                        .front {
+                            padding: .5rem 2rem;
+                            background-color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+
+            .pushable {
+                background-color: $primary-color;
+
+                a.front {
+                    font-weight: bold;
+                    background-color: $dark-color;
+                    color: $white-color;
+                    padding: .5rem 2rem;
+                }
+            }
+        }
+    }
+}
+
+// Modal projects
+.modal-project {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    transition: .4s;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+
+        .modal-project-box {
+            animation: rubberBand 1s;
+        }
+    }
+
+    .modal-project-box {
+        max-width: 60rem;
+        width: 85%;
+        background-color: #313236;
+        display: grid;
+        grid-template-columns: 55% 45%;
+        position: relative;
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            color: red;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+
+        &-left {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem;
+        }
+
+        &-right {
+            background-color: $dark-light;
+            padding: 1rem;
+
+            .project-title {
+                h4 {
+                    color: $dark-color;
+                }
+
+                h1 {
+                    color: $white-color;
+                    letter-spacing: 2px;
+                }
+            }
+
+            .project-techs {
+                gap: 1rem;
+
+                li {
+                    background-color: $dark-color;
+                    padding: .3rem .8rem;
+                    font-size: .9rem;
+                }
+            }
+
+            .project-about {
+                position: relative;
+                
+                &-description {
+                    overflow-y: scroll;
+                    max-height: 10rem;
+
+                    p {
+                        margin-bottom: 1rem;
+
+                        a {
+                            color: $primary-color;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                &-actions {
+                    gap: 1rem;
+
+                    a.pushable {
+                        background-color: $dark-color;
+
+                        span.front {
+                            background-color: $white-color;
+                            color: $dark-color;
+                            padding: .5rem 1rem;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

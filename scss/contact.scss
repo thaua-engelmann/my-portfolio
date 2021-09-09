@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('http://fonts.cdnfonts.com/css/alphacentauri');
+                
+@import './partials/config';
+@import './partials/reset';
+@import './partials/features';
+@import './partials/animations';
+@import './partials/utilities';
+@import './partials/desktop';
+@import './partials/mobile';
+
+
+// Contact section
+#contact {
+    padding: 4rem 0;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: $text-color;
+
+    .title {
+        font-size: 2.8rem;
+    }
+
+    p a {color: $text-color;}
+
+    .form {
+        position: relative;
+        max-width: 40rem;
+        margin: auto;
+
+        form {
+            position: relative;
+            width: 100%;
+
+            .input-group {
+                margin: 1.5rem 0;
+                position: relative;
+                display: flex;
+                border-bottom: 2px solid $dark-light;
+                transition: .5s;
+
+                // Error success form;
+                &.error {
+                    color: $error-color;
+                    border-bottom: 2px solid $error-color;
+
+                    input, textarea {
+                        color: $error-color;
+
+                        &::placeholder {
+                            color: $error-color;
+                        }
+                    }
+                }
+
+                i {
+                    position: absolute;
+                    top: .5rem;
+                    font-size: 1.5rem;
+                    padding-left: .5rem;
+                }
+
+                input, textarea{
+                    width: 100%;
+                    padding: .7rem 3rem;
+                    background-color: transparent;
+                    color: $white-color;
+                    border: none;
+                    outline: none;
+                    font-size: 1.1rem;
+
+                    &:focus + .underline::before {
+                        transform: scaleX(1);
+                    }
+                }
+
+                .underline {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 2px;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $primary-color;
+                        box-shadow: 0 0 10px $primary-color;
+                        transform: scaleX(0);
+                        transition: transform .4s;
+                    }
+                }
+            }
+
+            .submit-group {
+                display: flex;
+                justify-content: flex-end;
+
+                button.pushable {
+                    background-color: $dark-light;
+                    transition: .3s;
+
+                    &:hover {
+                        background-color: $primary-color;
+                    }
+
+                    span.front {
+                        padding: .5rem 1.8rem;
+                        background-color: $dark-color;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    .get-social {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        &-links ul {
+            gap: 2rem;
+            justify-content: center;
+
+            li.pushable {
+                
+                &:active {
+                    a.front {transform: translateY(-2px);}
+                }
+
+                &:nth-child(1) {
+                    background: rgba(0, 118, 181, .7);
+                }
+
+                &:nth-child(2) {
+                    background: rgba(51, 51, 51, .7);
+                }
+
+                &:nth-child(3) {
+                    background: rgba(111, 194, 176, .7);
+                }
+
+                &:nth-child(4) {
+                    background: rgba(86, 95, 105, .7);
+                }
+
+                a.front {
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    padding: .5rem 2rem;
+
+                    &.linkedin {
+                        background-color: rgba(0, 118, 181, 1);
+                    }
+
+                    &.github {
+                        background-color: rgba(51, 51, 51, 1);
+                    }
+
+                    &.email {
+                        background-color: rgba(111, 194, 176, 1);
+                    }
+
+                    &.resume {
+                        background-color: rgba(86, 95, 105, 1);
+                    }
+
+                    i {
+                        border-right: 2px solid $white-color;
+                        padding-right: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Success contact form;
+.success {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: springgreen;
+    box-shadow: 5px 5px 2px $secondary-color;
+    color: $dark-color;
+    padding: 1rem 2rem;
+    z-index: 4;
+    border-left: .4rem solid $dark-color;
+    gap: 1.5rem;
+    align-items: center;
+    font-weight: bold;
+    visibility: hidden;
+    opacity: 0;
+
+    &.show {
+        animation: showSuccess 1s ease forwards;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &.hide {
+        animation: hideSuccess 1s ease forwards;
+    }
+
+    .check {
+        background-color: $dark-color;
+        color: $white-color;
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 50%;
+    }
+}
